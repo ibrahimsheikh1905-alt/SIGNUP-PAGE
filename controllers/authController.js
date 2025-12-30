@@ -143,8 +143,7 @@ export const resendVerification = async (req, res) => {
     user.emailToken = emailToken;
     await user.save();
 
-    const verifyLink = `http://localhost:5000/api/auth/verify-email/${emailToken}`;
-
+const verifyLink = `https://signup-page-production.up.railway.app/api/auth/verify-email/${emailToken}`;
     await sendEmail({
       to: email,
       subject: "Verify your email",
