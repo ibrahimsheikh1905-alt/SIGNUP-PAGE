@@ -24,8 +24,7 @@ export const signup = async (req, res) => {
       isVerified: false,
     });
 
-    const verifyLink = `http://localhost:5000/api/auth/verify-email/${emailToken}`;
-
+const verifyLink = `https://signup-page-production.up.railway.app/api/auth/verify-email/${emailToken}`;
     // ✅ EMAIL SHOULD NOT BREAK SIGNUP
     try {
       await sendEmail({
